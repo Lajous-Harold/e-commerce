@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
 
+/* General Style */
+
 * {
   margin: 0;
   padding: 0;
@@ -69,6 +71,8 @@ button.white {
 body {
   width: 100%;
 }
+
+/* Home Page */
 
 #header {
   display: flex;
@@ -564,9 +568,14 @@ footer .copyright {
   font-weight: 600;
 }
 
-/* Single Product */
+/* Single Product Page */
 
-#prodetails .single-pro-image {
+#pro-details {
+  display: flex;
+  margin-top: 20px;
+}
+
+#pro-details .single-pro-image {
   width: 40%;
   margin-right: 50px;
 }
@@ -579,6 +588,149 @@ footer .copyright {
 .small-img-col {
   flex-basis: 24%;
   cursor: pointer;
+}
+
+#pro-details .single-pro-desc {
+  width: 50%;
+  padding-top: 30px;
+}
+
+#pro-details .single-pro-desc h4 {
+  padding: 40px 0 20px 0;
+}
+
+#pro-details .single-pro-desc h2 {
+  font-size: 26px;
+}
+
+#pro-details .single-pro-desc select {
+  display: block;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+
+#pro-details .single-pro-desc input {
+  width: 50px;
+  height: 47px;
+  padding-left: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+#pro-details .single-pro-desc input:focus {
+  outline: none;
+}
+
+#pro-details .single-pro-desc button {
+  background-color: #088178;
+  color: #fff;
+}
+
+#pro-details .single-pro-desc span {
+  line-height: 25px;
+}
+
+/* Blog Page */
+
+#page-header.blog-header {
+  background-image: url("img/banner/b19.jpg");
+}
+
+#blog {
+  padding: 150px 150px 0 150px;
+}
+
+#blog .blog-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  padding-bottom: 90px;
+}
+
+#blog .blog-img {
+  width: 50%;
+  margin-right: 40px;
+}
+
+#blog img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+#blog .blog-details {
+  width: 50%;
+}
+
+#blog .blog-details a {
+  text-decoration: none;
+  font-size: 11px;
+  color: #000;
+  font-weight: 700;
+  position: relative;
+  transition: 0.3s;
+}
+
+#blog .blog-details a::after {
+  content: "";
+  width: 50px;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  top: 5px;
+  right: -60px;
+  transition: 0.3s;
+}
+
+#blog .blog-details a:hover {
+  color: #088178;
+}
+
+#blog .blog-details a:hover::after {
+  background-color: #088178;
+}
+
+#blog .blog-box h1 {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  font-size: 70px;
+  font-weight: 700;
+  color: #c9cbce;
+  z-index: -1;
+}
+
+/* About Page */
+
+#page-header.about-header {
+  background-image: url("img/about/banner.png");
+}
+
+#about-head {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+#about-head img {
+  width: 50%;
+  height: auto;
+}
+
+#about-head div {
+  margin-left: 40px;
+}
+
+#about-app {
+  text-align: center;
+}
+
+#about-app video {
+  width: 70%;
+  height: auto;
+  margin-top: 30px;
+  border-radius: 20px;
 }
 
 /* Media Query */
@@ -631,6 +783,10 @@ footer .copyright {
     font-size: 24px;
   }
 
+  #header {
+    padding: 20px 40px;
+  }
+
   #lg-bag {
     display: none;
   }
@@ -676,6 +832,31 @@ footer .copyright {
 
   #newsletter .form {
     width: 70%;
+  }
+
+  #blog {
+    padding: 100px 100px 0 100px;
+  }
+
+  #about-head {
+    flex-direction: column;
+  }
+
+  #about-head img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #about-head div {
+    margin-left: 0;
+  }
+
+  #about-head div h2 {
+    text-align: center;
+  }
+
+  #about-app video {
+    width: 100%;
   }
 }
 
@@ -744,5 +925,58 @@ footer .copyright {
 
   footer .copyright {
     text-align: start;
+  }
+
+  #pro-details {
+    flex-direction: column;
+  }
+
+  #pro-details .single-pro-image {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  #pro-details .single-pro-desc {
+    width: 100%;
+  }
+
+  #blog {
+    padding: 100px 30px 0 30px;
+  }
+
+  #blog .blog-box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #blog .blog-img {
+    width: 100%;
+    margin-right: 0;
+    padding-bottom: 20px;
+  }
+
+  #blog .blog-details {
+    width: 100%;
+  }
+
+  #about-head {
+    flex-direction: column;
+  }
+
+  #about-head img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #about-head div {
+    margin-left: 0;
+  }
+
+  #about-head div h2 {
+    text-align: center;
+  }
+
+  #about-app video {
+    width: 100%;
   }
 }
